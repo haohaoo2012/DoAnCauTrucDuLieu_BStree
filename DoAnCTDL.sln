@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnCTDL", "DoAnCTDL\DoAnCTDL.csproj", "{CAEAC652-AB50-4FFC-8E4B-372CD0E3F0BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAEAC652-AB50-4FFC-8E4B-372CD0E3F0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEAC652-AB50-4FFC-8E4B-372CD0E3F0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEAC652-AB50-4FFC-8E4B-372CD0E3F0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEAC652-AB50-4FFC-8E4B-372CD0E3F0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E33726F-FA9E-4D88-8723-4499C65EA080}
+	EndGlobalSection
+EndGlobal
