@@ -5,7 +5,7 @@ Xây dựng cây nhị phân tìm kiếm với class Product:id, productName, pr
     
 ![image](https://user-images.githubusercontent.com/73508026/145363450-299538a3-5ebb-45fb-b11b-1caa33b245e3.png)
 
-**Chọn 1: Thêm Prodcut**
+**Chọn 1: Thêm Product**
 
 ![image](https://user-images.githubusercontent.com/73508026/145364000-dda1475a-a24f-4635-a012-63e1ce254fb0.png)
 
