@@ -1,5 +1,5 @@
 Đồ án môn CTDL & DL
-Xây dựng cây nhị phân tìm kiếm với class Product:id, productName, price, rate, description
+** Đề Tài:** Xây dựng cây nhị phân tìm kiếm với class Product:id, Product Name, Price, Rate, Description
      
 **Giao diện màn hình Menu**
     
