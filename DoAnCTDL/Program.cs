@@ -25,14 +25,14 @@ namespace DoAnCTDL
             tree.insert(new Node(new Product(12, "VGA NVIDIA", 3800, 4, "Ngon")));
             tree.insert(new Node(new Product(17, "USB 16gb", 250, 3, "Xịn xò")));
             tree.insert(new Node(new Product(7, "Laptop Dell Vostro 5490", 18000, 4, "Máy đẹp")));
-           // tree.insert(new Node(new Product(9, "laptop Lenovo Thinkpad T14", 21000, 4, "Máy mạnh")));
+            // tree.insert(new Node(new Product(9, "laptop Lenovo Thinkpad T14", 21000, 4, "Máy mạnh")));
             tree.insert(new Node(new Product(8, "Surface Pro 3", 15000, 3, "máy yếu")));
             tree.insert(new Node(new Product(3, "Logitech Mouse", 480, 3, "Giá ổn")));
 
-            Console.WriteLine("| 1 - Insert   |\n| 2 - Traverse |\n| 3 - Find     |\n| 4 - Remove   |\n| 0 - Exit     |");
+            Console.WriteLine("| 1 - Insert   |\n| 2 - Traverse |\n| 3 - Find     |\n| 4 - Remove   |\n| 5 - DepthTree|\n| 0 - Exit     |");
             for (; ; )
             {
-                Console.Write("----------------\nHoạt động :");
+                Console.Write("\n---Hoạt động :");
                 string sel = Console.ReadLine();
                 string _id;
                 int _Id;
@@ -54,18 +54,21 @@ namespace DoAnCTDL
                         Console.Write("Product Price = ");
                         _price = Console.ReadLine();
                         _Price = int.Parse(_price);
-                        Console.Write("Product Rating =");
+                        Console.Write("Product Rating = ");
                         _rating = Console.ReadLine();
                         _Rating = int.Parse(_rating);
-                        Console.Write("Product Description =");
+                        Console.Write("Product Description = ");
                         _Des = Console.ReadLine();
                         tree.insert(new Node(new Product(_Id, _Productname, _Price, _Rating, _Des)));
                         continue;
                     case "2":
                         try
                         {
+                            Console.WriteLine("Tổng số nút có trên cây là: " + tree.numNodesIn());
+                            Console.WriteLine("Tổng số cạnh có trên cây là: " + tree.numEdgesIn());
+                            Console.WriteLine("Chọn phương pháp duyệt cây:");
                             Console.Write("1 -- Inorder\n2 -- Preorder\n3 -- Postorder\n");
-                            Console.Write("Chọn Số: ");
+                            Console.Write("Phương pháp: ");
                             sel = Console.ReadLine();
                             switch (sel)
                             {
@@ -135,6 +138,12 @@ namespace DoAnCTDL
                         {
                             Console.WriteLine("\n\nKhông có kết quả tìm kiếm. Xin vui lòng thử lại! \n");
                             continue;
+                        }
+                    case "5":
+                        {
+                            Console.Write("Độ sâu lớn nhất của cây là: " + tree.maxDepth());
+                            Console.Write("\nĐộ sâu nhỏ nhất của cây là: " + tree.minDepth());
+                            break;
                         }
                     case "0":
                         Environment.Exit(0);

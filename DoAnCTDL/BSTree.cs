@@ -18,8 +18,8 @@ namespace DoAnCTDL
 		{
 			return size;
 		}
-//Insert
-		public  void insert(Node newNode)
+		//Insert
+		public void insert(Node newNode)
 		{
 			root = insert(root, newNode);
 		}
@@ -42,7 +42,7 @@ namespace DoAnCTDL
 			}
 			return node;
 		}
-//Search
+		//Search
 		public Node search(int productId)
 		{
 			return search(this.root, productId);
@@ -50,7 +50,7 @@ namespace DoAnCTDL
 
 		private Node search(Node node, int productId)
 		{
-			if (node == null)	return null;
+			if (node == null) return null;
 
 
 			if (node.hasproduct(productId))
@@ -66,7 +66,7 @@ namespace DoAnCTDL
 				return search(node.left, productId);
 			}
 		}
-//Delete
+		//Delete
 		public void delete(int productId)
 		{
 			root = delete(root, productId);
@@ -92,19 +92,19 @@ namespace DoAnCTDL
 					maxNode = maxNode.right;
 				}
 
-          //      Console.WriteLine("\n\n----------------------------------------NodeInfor----------------------------------------");
-          //      Console.Write("\npreNode: ");
-          //      preNode.Data();
-          //      Console.Write("\n\nmaxnode: ");
-          //      maxNode.Data();
-		        //Console.WriteLine("\n\n-----------------------------------------------------------------------------------------");
-				
+				//      Console.WriteLine("\n\n----------------------------------------NodeInfor----------------------------------------");
+				//      Console.Write("\npreNode: ");
+				//      preNode.Data();
+				//      Console.Write("\n\nmaxnode: ");
+				//      maxNode.Data();
+				//Console.WriteLine("\n\n-----------------------------------------------------------------------------------------");
+
 				maxNode.right = node.right;
 				if (maxNode != node.left)
 				{
 					preNode.right = maxNode.left;
 					maxNode.left = node.left;
-					
+
 				}
 				return maxNode;
 			}
@@ -117,9 +117,9 @@ namespace DoAnCTDL
 				node.left = delete(node.left, productId);
 			}
 			return node;
-            
+
 		}
-//TraversePreOrder
+		//TraversePreOrder
 		public void TraversePreOrder()
 		{
 			Console.Write("\n\n----------------------------------------TraversePreOrder-----------------------");
@@ -133,7 +133,7 @@ namespace DoAnCTDL
 			TraversePreOrder(node.left);
 			TraversePreOrder(node.right);
 		}
-//TraverseInOrder
+		//TraverseInOrder
 		public void TraversetInOrder()
 		{
 			Console.Write("\n\n----------------------------------------TraverseInOrder----------------------------------------");
@@ -147,7 +147,7 @@ namespace DoAnCTDL
 			node.Data();
 			TraverseInOrder(node.right);
 		}
-//TraversePostOrder
+		//TraversePostOrder
 		public void TraversePostOrder()
 		{
 			Console.Write("\n\n----------------------------------------TraversePostOrder----------------------------------------");
@@ -163,6 +163,73 @@ namespace DoAnCTDL
 			TraversePostOrder(node.left);
 			TraversePostOrder(node.right);
 			node.Data();
+		}
+		//Max Depth
+		public int maxDepth(Node node)
+		{
+			if (node == null)
+				return -1;
+			else
+			{
+				int leftDep = maxDepth(node.left);
+				int rightDep = maxDepth(node.right);
+
+				if (leftDep > rightDep)
+				{
+					return (leftDep + 1);
+				}
+				else
+				{
+					return (rightDep + 1);
+				}
+			}
+		}
+		public int maxDepth()
+		{
+			return maxDepth(this.root);
+		}
+		//Min Depth
+		public int minDepth(Node node)
+		{
+			if (node == null)
+				return -1;
+			else
+			{
+				int leftDep = minDepth(node.left);
+				int rightDep = minDepth(node.right);
+
+				if (leftDep < rightDep)
+				{
+					return (leftDep + 1);
+				}
+				else
+				{
+					return (rightDep + 1);
+				}
+			}
+		}
+		public int minDepth()
+		{
+			return minDepth(this.root);
+		}
+		//Tổng nút
+		public int numNodesIn(Node node)
+		{
+			if (node == null) return 0;
+			return 1 + numNodesIn(node.left) + numNodesIn(node.right);
+		}
+		public int numNodesIn()
+		{
+			return numNodesIn(this.root);
+		}
+		//Tổng cạnh
+		public int numEdgesIn(Node node)
+		{
+			return node == null ? 0 : numNodesIn(node) - 1;
+		}
+		public int numEdgesIn()
+		{
+			return numEdgesIn(this.root);
 		}
 	}
 }
