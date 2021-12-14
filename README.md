@@ -1,7 +1,7 @@
-                                      ĐỒ ÁN CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT
+                                           ĐỒ ÁN CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT
 
 
-	   Đề tài: Xây dựng cây nhị phân tìm kiếm với class Product:id, Product Name, Price, Rate, Description
+	       Đề tài: Xây dựng cây nhị phân tìm kiếm với class Product:id, Product Name, Price, Rate, Description
 
 -----------------------------------------------------------------------------------------------------------------
      
