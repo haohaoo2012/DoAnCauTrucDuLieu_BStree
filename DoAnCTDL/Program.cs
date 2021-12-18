@@ -130,7 +130,12 @@ namespace DoAnCTDL
                             {
                                 tree.delete(_Id);
                                 Console.WriteLine("\n\n---Đã xóa sản phẩm có Id = " + _Id);
-                                tree.TraversePreOrder();
+                             //Xóa trên Preorder
+                                //tree.TraversePreOrder();
+                             //Xóa trên Postorder
+                                //tree.TraversePostOrder();
+                             //Xóa trên Inorder
+                                tree.TraversetInOrder();
                             }
                             continue;
                         }
